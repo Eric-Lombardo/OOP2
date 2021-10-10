@@ -44,5 +44,20 @@ public class Main {
         System.out.println(holden.startEngine());
         System.out.println(holden.accelerate());
         System.out.println(holden.brake());
+
+        // TEST for Hamburger Class
+        System.out.println("=================== Hamburger =======================");
+        Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.56, "White"); // Basic hamburger on a White roll with Sausage, price is 3.56
+        hamburger.addHamburgerAddition1("Tomato", 0.27); // Added Tomato for an extra 0.27
+        hamburger.addHamburgerAddition2("Lettuce", 0.75); // Added Lettuce for an extra 0.75
+        hamburger.addHamburgerAddition3("Cheese", 1.13); // Added Cheese for an extra 1.13
+        System.out.println("Total Burger price is " + hamburger.itemizeHamburger()); // Total Burger price is 5.71
+        HealthyBurger healthyBurger = new HealthyBurger("Bacon", 5.67); // Healthy hamburger on a Brown rye roll with Bacon, price is 5.67
+        healthyBurger.addHamburgerAddition1("Egg", 5.43); // Added Egg for an extra 5.43
+        healthyBurger.addHealthyAddition1("Lentils", 3.41); // Added Lentils for an extra 3.41
+        System.out.println("Total Healthy Burger price is  " + healthyBurger.itemizeHamburger()); // Total Healthy Burger price is  14.51
+        DeluxeBurger db = new DeluxeBurger();
+        db.addHamburgerAddition3("Should not do this", 50.53);
+        System.out.println("Total Deluxe Burger price is " + db.itemizeHamburger()); // Total Deluxe Burger price is 19.10
     }
 }
